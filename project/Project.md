@@ -1,6 +1,6 @@
 # Dungeon Master AI Project
 
-**Author:** Austin Turner
+### **Author:** Austin Turner
 
 A Python-based AI Dungeon Master that runs as a networked turn-based server, guiding players through Dungeons & Dragons adventures with dynamic storytelling, dice-based mechanics, retrieval-augmented context, multi-step reasoning, and NPC image generation.
 
@@ -48,16 +48,16 @@ The system prompt and parameters maintain narrative coherence and structured rea
 The DM integrates several AI-driven tools:
 
 - **Dice Rolling (roll_dice):**
-- Uses the d20 library to parse and execute standard D&D dice notation.
-- Provides detailed roll outcomes to players (including total and breakdown).
+  - Uses the d20 library to parse and execute standard D&D dice notation.
+  - Provides detailed roll outcomes to players (including total and breakdown).
 
 - **NPC Image Generation (generate_npc_image):**
-- Uses Python's Pillow library to dynamically create placeholder NPC images.
-- Enhances immersion by visually depicting characters based on textual descriptions.
+  - Uses Python's Pillow library to dynamically create placeholder NPC images.
+  - Enhances immersion by visually depicting characters based on textual descriptions.
 
 - **Retrieval-Augmented Generation (RAG):**
-- Implements ChromaDB and LangChain to manage detailed class information (classes_info.txt).
-- Ensures consistent, accurate narrative context throughout gameplay.
+  - Implements ChromaDB and LangChain to manage detailed class information (classes_info.txt).
+  - Ensures consistent, accurate narrative context throughout gameplay.
 
 ---
 
@@ -81,18 +81,17 @@ The AI demonstrates advanced multi-step reasoning capabilities:
 The system effectively incorporates Retrieval-Augmented Generation (RAG):
 
 - **Context Management:**
-- Utilizes a custom embedding function with Ollama to store and query detailed context in ChromaDB.
-- Automatically retrieves relevant context (class information and environment details) based on player actions or narrative needs.
+  - Utilizes a custom embedding function with Ollama to store and query detailed context in ChromaDB.
+  - Automatically retrieves relevant context (class information and environment details) based on player actions or narrative needs.
 
 - **Integration:**
-- When players take specific actions, the DM retrieves context to enhance the narrative.
+  - When players take specific actions, the DM retrieves context to enhance the narrative.
 
 ---
 
 ## Additional Tools / Innovation
 
 **NPC Image Generation with Pillow:**
-
 - Automatically gets called upon first introduction of any new NPC
 - Creates and saves PNG images depicting NPC descriptions
 
