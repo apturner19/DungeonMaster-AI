@@ -102,11 +102,11 @@ The system effectively incorporates Retrieval-Augmented Generation (RAG):
 The project has a clean, modular, and maintainable code design:
 
 - **Modularity:**
-- Separate modules with separate responsibilities:
-  - `session_manager.py`: Manages the AI loop, tool calls, and RAG interactions
-  - `dnd_dm.py`: Entry-point script
-- Facilitates ease of debugging, enhancement, and feature addition
+  - Separate modules with separate responsibilities:
+    - `session_manager.py`: Manages the AI loop, tool calls, and RAG interactions
+    - `dnd_dm.py`: Entry-point script
+  - Facilitates ease of debugging, enhancement, and feature addition
 
 - **Documentation & Best Practices:**
-- Descriptive comments
-- Organized folder structure
+  - Descriptive comments
+  - Organized folder structure
