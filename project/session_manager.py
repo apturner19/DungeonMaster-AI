@@ -8,6 +8,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.resolve()))
 import ollama
 import chromadb
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from PIL import Image, ImageDraw, ImageFont
 
 from util.llm_utils import TemplateChat
 
@@ -18,19 +19,52 @@ def track_tools(fn):
         calls[fn.__name__].append({
           "args": args, "kwargs": kwargs, "result": out
         })
-        print(f"[TOOL] {fn.__name__} → {out}")
+        print(f"[TOOL] {fn.__name__} -> {out}")
         return out
     return wrapper
 
 @track_tools
+# Roll the given dice notation and return the result
 def roll_dice(notation: str, **kwargs) -> dict:
-    # Roll the given dice notation and return the result
     result = d20.roll(notation)
     return {
         "notation": notation,
         "total": result.total,
         "detail": str(result)
     }
+
+@track_tools
+# Creates a 512×512 PNG with the NPC description written on it, saves it locally, and returns the filename
+def generate_npc_image(description: str, style: str = "fantasy illustration") -> str:
+    # Make a dark background canvas
+    img = Image.new("RGB", (512, 512), color=(30, 30, 30))
+    draw = ImageDraw.Draw(img)
+
+    # Load a font
+    font = ImageFont.load_default()
+
+    # Wrap the text to fit
+    safe = description.encode("ascii", "ignore").decode("ascii")
+    words = safe.split()
+    lines = []
+    for w in words:
+        if not lines or len(lines[-1]) + len(w) + 1 > 40:
+            lines.append(w)
+        else:
+            lines[-1] += " " + w
+
+    # Draw the description of the NPC in the center
+    y = 200
+    for line in lines:
+        w, h = draw.textsize(line, font=font)
+        draw.text(((512 - w) / 2, y), line, fill=(200, 200, 200), font=font)
+        y += h + 4
+
+    # Save it as a png
+    filename = f"npc_{abs(hash(description)) % 100000}.png"
+    img.save(filename)
+
+    return filename
 
 class KnowledgeBase:
     # Split a text file into chunks and index them
