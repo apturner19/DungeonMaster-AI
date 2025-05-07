@@ -111,8 +111,3 @@ The project has a clean, modular, and maintainable code design:
 - **Documentation & Best Practices:**
 - Descriptive comments
 - Organized folder structure
-
----
-
-**How to Use**  
-Run the project using:
