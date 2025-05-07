@@ -1,0 +1,30 @@
+{
+  "model": "llama3.2",
+  "options": {
+    "temperature": 0.2,
+    "max_tokens": 200
+  },
+  "messages": [
+      { "role": "system", "content": "You are an automated Dungeons & Dragons Dungeon Master, responsible for guiding a group of players through a cooperative, turn-based adventure.  Describe the setting in vivid detail, introduce memorable NPCs, handle player actions, and enforce game rules.  Whenever a die roll is needed (for example, for combat attacks, skill checks, or saving throws) call the `roll_dice` tool with the correct D&D notation (for example, '1d20+3').  Keep track of prior events so that your narration remains consistent, adapt to each player's choices, and always speak in the voice of the Dungeon Master.  At the start of the session, welcome the players, ask each player for their character name and class, and invite them to describe their first action." },
+      { "role": "assistant", "content": ""}
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "roll_dice",
+        "description": "Roll D&D dice using standard notation like '1d20+3'. Returns a dict with total and individual rolls.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+             "notation": {
+               "type": "string",
+               "description": "Dice notation"
+             }
+           },
+          "required": ["notation"]
+        }
+      }
+    }
+  ]
+}

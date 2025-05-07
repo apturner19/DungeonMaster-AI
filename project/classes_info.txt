@@ -1,0 +1,43 @@
+# Mystic Wares Catalog
+
+    # Barbarian
+        A force of untamed fury, the Barbarian charges into battle with raw power. Each item here echoes their primal spirit.
+
+        ## Thunderhorn Greataxe – +2 Strength, +1 Knockback; swings crack like rolling thunder.
+        ## Juggernaut Bracers – +3 Endurance, Resist Push; heavy iron bands lock you in place.
+        ## Rageborne Draught – Heals 20 HP, grants +2 attack, leaves you breathless afterwards.
+
+    # Monk
+        Disciplined and serene, the Monk channels inner chi to strike and dodge with supernatural speed.
+
+        ## Silkwind Wraps – +3 Dexterity, +1 Unarmed Strike; silk bands humming with focused energy.
+        ## Whisperstep Sandals – +2 Speed, +1 Stealth; your footsteps mute as drifting feathers.
+        ## Tranquil Elixir – Restores 15 HP, +1 to all saves for 5 minutes of calm clarity.
+
+    # Cleric
+        Blessed by higher powers, the Cleric wields radiant blessings to mend allies and banish darkness.
+
+        ## Radiant Dawn Mace – +2 Radiant Damage, +1 to healing spells; its head glows like dawn’s first light.
+        ## Aegis Tabard – +3 AC, +1 Resistance to fear; emblazoned with wards of protection.
+        ## Chalice of Benediction – Once per day casts a +2 blessing on any ally’s next roll.
+
+    # Blood Hunter
+        Masters of forbidden rites, Blood Hunters sacrifice vitality to slay monstrosities with crimson magic.
+
+        ## Sanguine Fang – +2 Crit vs aberrations, lifesteal on crit; blade weeps rubies.
+        ## Oathweave Cloak – +1 Stealth, +1 Poison Resist; hem inscribed with consecrated vows.
+        ## Crimson Vial – Trade 1d8 HP for bonus damage equal to that roll (take half as recoil).
+
+    # Arcane Alchemist
+        Architects of alchemical chaos, they brew potions that shimmer with volatile arcana.
+
+        ## Prismatic Vial – Unleash a 15-ft cone of elemental chaos; recharges at first light.
+        ## Philosopher’s Censer – +1 Arcana, doubles one potion’s effect each short rest.
+        ## Tincture of Illusion – Grants invisibility for 1d4 minutes or until you strike.
+
+    # Illusionist
+        Masters of deception, Illusionists twist reality into phantom sights and sounds.
+
+        ## Mirage Mantle – +2 Persuasion, once per day reflect an illusion back at its caster.
+        ## Echoing Mask – +1 Insight, whispers lost secrets when worn.
+        ## Dreamdust Pouch – Scatters fog that silences and disorients in a 10-ft radius.
